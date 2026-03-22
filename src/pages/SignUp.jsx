@@ -1,17 +1,26 @@
 const SignUp = () => {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const onEmailChange = (value) => {
+    setEmail(value)
+  }
+
+  const onPasswordChange = (value) => {
+    setPassword(value)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    
+    // handle API call
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="email@exemplo.com"/>
-        <input type="password" placeholder="Senha"/>
-        <button type="submit"/>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input type="email" placeholder="email@exemplo.com" onChange={(e) => onEmailChange(e.target.value)}/>
+      <input type="password" placeholder="Senha" onChange={(e) => onPasswordChange(e.target.value)}/>
+      <button type="submit"/>
+    </form>
   )
 }
 
