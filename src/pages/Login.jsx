@@ -39,7 +39,7 @@ const Login = () => {
             </button>
             <p>
                 Não tem conta?
-                <Link to="signup">Cadastre-se</Link>
+                <Link to="/signup">Cadastre-se</Link>
             </p>
         </form>
     </div>
